@@ -13,17 +13,15 @@ async function initSql () {
   }
 
   try {
-    let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
-
     sql = postgres({
-      host: PGHOST,
-      database: PGDATABASE,
-      username: PGUSER,
-      password: PGPASSWORD,
+      host: "ep-fancy-wood-a1nhazah.ap-southeast-1.aws.neon.tech",
+      database: "neondb",
+      username: "ayushbhatt.contact",
+      password: "KlLPgEFWo0a3",
       port: 5432,
       ssl: 'require',
       connection: {
-        options: `project=${ENDPOINT_ID}`,
+        options: `project=ep-fancy-wood-a1nhazah`,
       },
     });
 
